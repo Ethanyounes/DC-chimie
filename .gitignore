@@ -1,0 +1,14 @@
+.venv/
+.uv-cache/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.ipynb_checkpoints/
+data/processed/*
+!data/processed/.gitkeep
+outputs/models/*
+!outputs/models/.gitkeep
+outputs/submissions/*
+!outputs/submissions/.gitkeep
+outputs/runs/*
+!outputs/runs/.gitkeep

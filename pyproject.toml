@@ -1,0 +1,28 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "dc-chimie"
+version = "0.1.0"
+description = "Prediction de pIC50 a partir de structures moleculaires"
+requires-python = ">=3.12"
+dependencies = [
+    "numpy>=2",
+    "pandas>=2.2",
+    "rdkit>=2024.3",
+    "scikit-learn>=1.5",
+    "joblib>=1.4",
+    "pyyaml>=6",
+]
+
+[dependency-groups]
+dev = ["jupyterlab>=4", "ipykernel>=6", "nbconvert>=7"]
+
+[project.scripts]
+dc-train = "dc_chimie.train:main"
+dc-predict = "dc_chimie.predict:main"
+
+[tool.uv]
+cache-dir = ".uv-cache"
+
